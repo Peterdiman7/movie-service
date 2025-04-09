@@ -32,9 +32,4 @@ public class Movie {
     @NotNull
     private String genre;
 
-    @NotNull
-    private Double rating;
-
-    @NotNull
-    private String description;
 }
