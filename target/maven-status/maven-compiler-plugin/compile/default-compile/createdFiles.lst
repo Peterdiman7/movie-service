@@ -3,6 +3,7 @@ com/peter/movie_service/dto/MovieRequestDTO.class
 com/peter/movie_service/config/CorsConfig$1.class
 com/peter/movie_service/service/impl/MovieServiceImpl.class
 com/peter/movie_service/config/CorsConfig.class
+com/peter/movie_service/config/SecurityConfig.class
 com/peter/movie_service/repository/MovieRepository.class
 com/peter/movie_service/service/MovieService.class
 com/peter/movie_service/MovieServiceApplication.class
