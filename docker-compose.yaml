@@ -1,30 +1,34 @@
-version: '3'
-services:
-  # Database Service
-  database:
-    image: postgres:latest
-    ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_DB=movies
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=123
-    volumes:
-      - './postgres/init:/docker-entrypoint-initdb.d:ro'
+version: '3.8'
 
-  # Your Application Service
-  app:
-    build: .
-    ports:
-      - 4000:4000
-    depends_on:
-      - database
+services:
+  # MySQL Database Service
+  mysqldb:
+    image: mysql:8.0
+    container_name: movies
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://database:5432/movies
-      - SPRING_DATASOURCE_USERNAME=postgres
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: movies
+    ports:
+      - "5000:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  # Spring Boot Application Service
+  movie-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: movie-service
+    ports:
+      - "4000:4000"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/movies
+      - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=123
-    networks:
-      - app-network
+    depends_on:
+      - mysqldb
+volumes:
+  mysql-data:
 
 networks:
   app-network:
