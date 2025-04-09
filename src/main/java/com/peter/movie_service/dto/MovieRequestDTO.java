@@ -15,7 +15,7 @@ public class MovieRequestDTO {
     private String director;
 
     @NotBlank(message = "Release Date is required!")
-    private LocalDate releaseDate;
+    private String releaseYear;
 
     @NotBlank(message = "Genre is required!")
     private String genre;

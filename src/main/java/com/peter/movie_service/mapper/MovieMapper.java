@@ -11,7 +11,7 @@ public class MovieMapper {
         movieResponseDTO.setId(movie.getId());
         movieResponseDTO.setTitle(movie.getTitle());
         movieResponseDTO.setDirector(movie.getTitle());
-        movieResponseDTO.setReleaseDate(movie.getReleaseDate());
+        movieResponseDTO.setReleaseYear(movie.getReleaseYear());
         movieResponseDTO.setGenre(movie.getGenre());
 
         return movieResponseDTO;
@@ -22,7 +22,7 @@ public class MovieMapper {
 
         movie.setTitle(movieRequestDTO.getTitle());
         movie.setDirector(movieRequestDTO.getDirector());
-        movie.setReleaseDate(movieRequestDTO.getReleaseDate());
+        movie.setReleaseYear(movieRequestDTO.getReleaseYear());
         movie.setGenre(movieRequestDTO.getGenre());
 
         return movie;

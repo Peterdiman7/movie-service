@@ -1,4 +1,5 @@
 /Users/peterdiman7/Desktop/movie-service/src/main/java/com/peter/movie_service/MovieServiceApplication.java
+/Users/peterdiman7/Desktop/movie-service/src/main/java/com/peter/movie_service/config/CorsConfig.java
 /Users/peterdiman7/Desktop/movie-service/src/main/java/com/peter/movie_service/controller/HomeController.java
 /Users/peterdiman7/Desktop/movie-service/src/main/java/com/peter/movie_service/controller/MovieController.java
 /Users/peterdiman7/Desktop/movie-service/src/main/java/com/peter/movie_service/dto/MovieRequestDTO.java

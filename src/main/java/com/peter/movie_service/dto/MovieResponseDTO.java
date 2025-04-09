@@ -12,7 +12,7 @@ public class MovieResponseDTO {
 
     private String director;
 
-    private LocalDate releaseDate;
+    private String releaseYear;
 
     private String genre;
 

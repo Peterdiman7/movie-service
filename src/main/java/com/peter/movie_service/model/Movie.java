@@ -27,7 +27,7 @@ public class Movie {
     private String director;
 
     @NotNull
-    private LocalDate releaseDate;
+    private String releaseYear;
 
     @NotNull
     private String genre;
